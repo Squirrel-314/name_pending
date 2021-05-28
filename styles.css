@@ -1,0 +1,225 @@
+* {
+   padding: 0;
+   margin: 0;
+}
+
+.start {
+   width: 100%;
+   height: 100vh;
+   text-align: center;
+   background-image: url("background.png");
+   background-size: cover;
+}
+
+#start-heading {
+   padding: 30px 35px;
+   margin: 5px 250px;
+   border: groove black 5px;
+}
+
+.start-button-box {
+   margin-top: 75px;
+}
+
+.start-button {
+   font-size: 25px;
+   padding: 20px 25px;
+   margin: 5px auto;
+   background-color: hotpink;
+   display: block;
+   width: 175px;
+   border-radius: 50px;
+   text-align: center;
+   border: solid #ffea0c 5px;
+   color: #eee;
+}
+
+.game {
+   display: none;
+   height: 100vh;
+   grid-template-areas:
+   "one one"
+   "two three"
+   "two three";
+}
+
+.prosperity-marks {
+   grid-area: one;
+   background-color: #dcf2ff;
+   height: 20vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   overflow: hidden;
+}
+
+.issues {
+   grid-area: two;
+   background-color: #d66363;
+   height: 80vh;
+   width: 65vw;
+   position: relative;
+}
+
+.options {
+   grid-area: three;
+   background-color: #ffe564;
+   height: 80vh;
+   width: 35vw;
+   position: relative;
+}
+
+.prosp-item {
+   height: 100%;
+   width: 25vw;
+   margin: 0 2.5vh;
+   padding: 0 .5vh;
+   text-align: center;
+}
+
+.prosp-item img {
+   height: 12vh;
+   margin: 0 auto;
+}
+
+.settings {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 12vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.settings button {
+    height: 80%;
+    width: 48%;
+    margin: 0 .3vh;
+    background-color: #000;
+    color: #fff;
+    border: outset 1vh gold;
+    font-family: emoji;
+    font-size: 4vh;
+    font-weight: 100;
+}
+
+.settings button:active {
+    border: inset 1vh gold;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.choices button {
+    width: 32vw;
+    padding: 3.5vh 2vh;
+    margin: 2vh auto;
+    border: inset 1.5vh #bce7f5;
+    border-radius: 5vh;
+}
+
+.option-tooltip {
+   position: relative;
+}
+
+.option-tooltip img { height: 8vh; }
+
+.option-tooltip .tooltip-text {
+   position: absolute;
+   opacity: 0;
+   pointer-events: none;
+   height: 120%;
+   min-width: 125%;
+   background-color: #eee;
+   text-align: center;
+   border-radius: 2vh;
+   padding: .5vh 0;
+   box-shadow: 0 0 2vh #ddd;
+   font-size: 3vh;
+   color: #262626;
+   top: -3vh;
+   right: 80%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 2vh 5vh;
+   transition: .8s;
+}
+
+.option-tooltip .tooltip-text::after {
+   content: "";
+   position: absolute;
+   top: 50%;
+   left: 100%;
+   margin-top: -1vh;
+   border-width: 1vh;
+   border-style: solid;
+   border-color: transparent transparent transparent #eee;
+}
+
+.option-tooltip:hover .tooltip-text {
+   opacity: 1;
+   pointer-events: auto;
+   right: 105%;
+}
+
+.years {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 2vh;
+    font-size: 5vh;
+}
+
+.current-issue {
+    margin: 5vh;
+    padding: 2vh;
+    text-align: center;
+    font-size: 5.5vh;
+    color: #eee;
+    border: inset 2vh #bb3838;
+    border-radius: 5vh;
+}
+
+.info {
+   pointer-events: none;
+   opacity: 0;
+   position: fixed;
+   z-index: 1;
+   padding-top: 10vh;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.7);
+   transition: .6s;
+}
+
+.modal-content {
+   width: 80%;
+   height: 75%;
+   margin: auto;
+   padding: 4vh;
+   font-size: 6vh;
+   border-radius: .8vh;
+   background-color: #fefefe;
+   text-align: center;
+   font-family: "Roboto Condensed";
+   overflow: auto;
+}
+
+.close {
+   float: right;
+   height: 8vh;
+   width: 8vh;
+   padding: .2vh;
+   border-radius: 2vh;
+   width: 8vh;
+   transition: 0.2s;
+}

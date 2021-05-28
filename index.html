@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="styles.css">
+      <title>It does not have a name yet!</title>
+   </head>
+   <body>
+      <div class="start">
+         <h1 id="start-heading">Name of Game</h1>
+         <div class="start-button-box">
+            <button onclick="startGame()" class="start-button">Play</button>
+            <button class="start-button">Tutorial</button>
+            <button class="start-button">Rank</button>
+            <button class="start-button">Leave</button>
+         </div>
+      </div>
+      <div class="game">
+         <div class="prosperity-marks">
+            <div class="prosp-item">
+               <p>Wealth</p>
+               <img onclick="openInfo('Wealth')" src="Images/wealth.png" alt="">
+               <p id="wealth">Item quantity</p>
+               <div id="infoWealth" class="info">
+                  <div class="modal-content">
+                     <button onclick="openInfo('Wealth')" class="close">x</button>
+                     <h2>Wealth</h2>
+                     <p>Shows the prosperity of your people, and reflects various other prosperity marks. Generates happiness.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="prosp-item">
+               <p>Population</p>
+               <img onclick="openInfo('Population')" src="Images/population.png" alt="">
+               <p id="population">Item quantity</p>
+               <div id="infoPopulation" class="info">
+                  <div class="modal-content">
+                     <button onclick="openInfo('Population')" class="close">x</button>
+                     <h2>Population</h2>
+                     <p>The amount of people that live in your town</p>
+                  </div>
+               </div>
+            </div>
+            <div class="prosp-item">
+               <p>Land</p>
+               <img onclick="openInfo('Land')" src="Images/land.png" alt="">
+               <p id="land">Item quantity</p>
+               <div id="infoLand" class="info">
+                  <div class="modal-content">
+                     <button onclick="openInfo('Land')" class="close">x</button>
+                     <h2>Land</h2>
+                     <p>The terriory your country owns, generates wealth.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="prosp-item">
+               <p>Happiness</p>
+               <img src="Images/happiness.png" alt="">
+               <p id="happiness">Item quantity</p>
+            </div>
+            <div class="prosp-item">
+               <p>Military</p>
+               <img src="Images/military.png" alt="">
+               <p id="military">Item quantity</p>
+            </div>
+            <div class="prosp-item">
+               <p>Diplomacy</p>
+               <img src="Images/diplomacy.png" alt="">
+               <p id="diplomacy">Item quantity</p>
+            </div>
+         </div>
+         <div class="issues">
+            <p class="current-issue">No issues</p>
+            <p class="years">0 Years</p>
+            <!--<input class="import-save">-->
+         </div>
+         <div class="options">
+            <div class="choices">
+               <div class="option-tooltip">
+                  <button class="option-1-button">Option 1</button>
+                  <span class="tooltip-text option-1-effects">Here are the effects of this option</span>
+               </div>
+               <div class="option-tooltip">
+                  <button class="option-2-button">Option 2</button>
+                  <span class="tooltip-text option-2-effects">Here are the effects of this option</span>
+               </div>
+               <div class="option-tooltip">
+                  <button class="option-3-button">Option 3</button>
+                  <span class="tooltip-text option-3-effects">Here are the effects of this option</span>
+               </div>
+               <div class="option-tooltip">
+                  <button class="option-4-button">Option 4</button>
+                  <span class="tooltip-text option-4-effects">Here are the effects of this option</span>
+               </div>
+            </div>
+            <div class="settings">
+               <button onclick="restart()">Restart</button>
+               <button>Menu</button>
+            </div>
+         </div>
+      </div>
+   </body>
+   <script src="main.js" charset="utf-8"></script>
+</html>
